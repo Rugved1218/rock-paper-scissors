@@ -1,7 +1,7 @@
 # Rock Paper Scissors
 
 **Project Overview:**  
-A *console-based game where users can play Rock-Paper-Scissors against the computer.
+A *console-based game* where users can play Rock-Paper-Scissors against the computer.
 
 ---
 
@@ -29,5 +29,13 @@ A *console-based game where users can play Rock-Paper-Scissors against the compu
 
 ---
 
+**Future Improvements:**  
+- Add a web-based GUI with buttons for Rock, Paper, and Scissors  
+- Display scores dynamically on the page  
+
+---
+
 **Author:**  
 Rugved Bajare - [GitHub Profile](https://github.com/rugved1218)
+
+
