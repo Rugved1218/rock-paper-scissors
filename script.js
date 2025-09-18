@@ -70,7 +70,6 @@ function playRound(humanChoice,computerChoice){
 function playGame(){
     for(let i=1;i<=5;i++){
         console.log("Round ",i)
-
         let userChoice=getHumanChoice();
         console.log("Your Choice: ",userChoice);
         let computerChoice=getComputerChoice();
