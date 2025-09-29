@@ -1,6 +1,8 @@
 let humanScore=0;
 let computerScore=0;
 
+alert("It is a game of 5 rounds");
+
 function getComputerChoice()
 {
     const a=Math.floor((Math.random())*3)+1;
@@ -186,7 +188,7 @@ btncontainer.addEventListener('click',(event) => {
         console.log("");
         console.log("");
 
-        currRound.textContent="ROUND "+roundNo;
+        currRound.textContent="ROUND "+roundNo+ " of 5";
         currRoundResult.append(currRound);
 
        
