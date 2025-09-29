@@ -2,13 +2,11 @@
   
 A browser-based implementation of the classic Rock-Paper-Scissors game, developed using HTML, CSS, and JavaScript. This project demonstrates interactive gameplay, score tracking, and a responsive design.
 
----
 
 ## 🔗 Live Demo
 
 Experience the game here: [Rock-Paper-Scissors](https://rugved1218.github.io/rock-paper-scissors/)
 
----
 
 ## Overview
 
@@ -23,14 +21,12 @@ The game allows users to compete against the computer with randomized moves. Sco
 - Shows who wins each round.
 -  Shows who wins the match with final scores.
 
----
 
 ## Tech Stack:  
 
 - **Language**: JavaScript , HTML5, CSS3, CSS Flexbox
 - **Tools & IDEs**: VS Code , Chrome DevTools
 
----
 
 ## Gameplay Instructions
 
@@ -43,7 +39,6 @@ The game allows users to compete against the computer with randomized moves. Sco
 4. Draws are acknowledged if both selections are the same.
 5. The game continues until the predefined number of rounds is completed, and a winner is declared.
 
----
 
 ## Project Highlights
 
@@ -51,7 +46,6 @@ The game allows users to compete against the computer with randomized moves. Sco
 - Implements event-driven programming with clean and maintainable code.
 - Provides a polished user experience suitable for portfolio showcase.
 
----
 
 ## Author:
 Rugved Bajare - [GitHub Profile](https://github.com/rugved1218)
