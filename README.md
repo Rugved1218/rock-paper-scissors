@@ -1,16 +1,21 @@
-# Rock Paper Scissors
-
-**Project Overview:**  
+# Rock-Paper-Scissors 🎮
+  
 A browser-based implementation of the classic Rock-Paper-Scissors game, developed using HTML, CSS, and JavaScript. This project demonstrates interactive gameplay, score tracking, and a responsive design.
 
 ---
 
-**🔗 Live Demo**
+## 🔗 Live Demo
+
 Experience the game here: [Rock-Paper-Scissors](https://rugved1218.github.io/rock-paper-scissors/)
 
 ---
 
-**Features:**  
+## Overview
+
+The game allows users to compete against the computer with randomized moves. Scores are tracked dynamically, providing immediate feedback on each round and declaring a winner at the end of the game.
+
+**Features:** 
+
 - User-friendly interface with clear game instructions.
 -  Play against the computer.
 - Dynamic score tracking for both player and computer.
@@ -20,13 +25,15 @@ Experience the game here: [Rock-Paper-Scissors](https://rugved1218.github.io/roc
 
 ---
 
-**Tech Stack:**  
-- Language: JavaScript , HTML5 , CSS3 , CSS-FLEX 
-- Tools: VS Code , Chrome DevTools
+## Tech Stack:  
+
+- **Language**: JavaScript , HTML5, CSS3, CSS Flexbox
+- **Tools & IDEs**: VS Code , Chrome DevTools
 
 ---
 
-**Gameplay Instructions**
+## Gameplay Instructions
+
 1. Click on one of the options: ✊ Rock, ✋ Paper, or ✌️ Scissors.
 2. The computer randomly selects its move.
 3. Scores are updated based on the outcome:
@@ -38,14 +45,15 @@ Experience the game here: [Rock-Paper-Scissors](https://rugved1218.github.io/roc
 
 ---
 
-**Project Highlights**
+## Project Highlights
+
 - Demonstrates JavaScript DOM manipulation for interactive UI.
 - Implements event-driven programming with clean and maintainable code.
 - Provides a polished user experience suitable for portfolio showcase.
 
 ---
 
-**Author:**  
+## Author:
 Rugved Bajare - [GitHub Profile](https://github.com/rugved1218)
 
 
