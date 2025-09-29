@@ -19,43 +19,43 @@ function playRound(humanChoice,computerChoice){
 
     if(humanChoice==="rock" && computerChoice==="scissors"){
         humanScore++;
-        return("You win! Rock beats Scissors")
+        return("You win! Rock beats Scissors 🏆")
         
     }
     else if(humanChoice==="rock" && computerChoice==="paper"){
         computerScore++;
-        return("You lose! Paper beats Rock")
+        return("You lose! Paper beats Rock 💔")
     }
     else if(humanChoice==="rock" && computerChoice==="rock"){
         humanScore++;
         computerScore++;
-        return("That's a tie!")
+        return("That's a tie! ⚖️")
     }
     else if(humanChoice==="paper" && computerChoice==="scissors"){
         computerScore++;
-        return("You lose! Scissors beats Paper");
+        return("You lose! Scissors beats Paper 💔");
     }
     else if(humanChoice==="paper" && computerChoice==="paper"){
         humanScore++;
         computerScore++;
-        return("That's a tie!");
+        return("That's a tie! ⚖️");
     }
     else if(humanChoice==="paper" && computerChoice==="rock"){
         humanScore++;
-        return("You win! Paper beats Rock");
+        return("You win! Paper beats Rock 🏆");
     }
     else if(humanChoice==="scissors" && computerChoice==="scissors"){
         humanScore++;
         computerScore++;
-        return("That's a tie!");
+        return("That's a tie! ⚖️");
     }
     else if(humanChoice==="scissors" && computerChoice==="paper"){
         humanScore++;
-        return("You win! Scissors beats Paper");
+        return("You win! Scissors beats Paper 🏆");
     }
     else if(humanChoice==="scissors" && computerChoice==="rock"){
         computerScore++; 
-        return("You lose! Rock beats Scissors");
+        return("You lose! Rock beats Scissors 💔");
     }
     else{};
     
@@ -65,7 +65,7 @@ function playRound(humanChoice,computerChoice){
 let results=document.querySelector("#results");
 
 
-let btncontainer = document.querySelector('#button-container');
+let btncontainer = document.querySelector('.userChoice #button-container');
 
 humanScore=0;
 computerScore=0;
@@ -77,28 +77,36 @@ let divUserSelection=document.querySelector(".userSelection");
 
 let roundNo=1;
 
+const currRoundResult=document.querySelector(".currResult");
+
+const currRound=document.createElement("div");
+currRound.setAttribute("class","currRound");
+
+const currScore=document.createElement("div");
+currScore.setAttribute("class","currScore");
+
+
+
 
 btncontainer.addEventListener('click',(event) => {
     if(roundNo>5){
         event.stopPropagation;
-        const final_result=document.querySelector(".final-result");
-        console.log(final_result)
-        if(humanScore>computerScore){
-            final_result.textContent="You Won the Game! 🏆";
-        }
-        else if(humanScore<computerScore){
-            final_result.textContent="You Lost the Game! 💔";
-        }
-        else{
-            final_result.textContent="It's a Tie ⚖️";
-        };
+        
     }
     else{
-    
+        
+        
         const target=event.target;
         const computerSelection=getComputerChoice();
         let roundresult;
         let userSelection;
+
+        const roundContainer=document.createElement('div');
+        results.appendChild(roundContainer);
+        roundContainer.setAttribute("class","Round-Container");
+
+        const roundContainerScore=document.createElement('div');
+        roundContainerScore.setAttribute("class","Score");
 
         const resultsdivRound=document.createElement('div');
         const resultsdiv=document.createElement('div');
@@ -106,8 +114,11 @@ btncontainer.addEventListener('click',(event) => {
         const resultsdivUserScore=document.createElement('div');
         const resultsdivCompScore=document.createElement('div');
 
+
         resultsdivRound.textContent=("Round "+ roundNo);
-        results.appendChild(resultsdivRound);
+
+        roundContainer.appendChild(resultsdivRound);
+        
         
 
         switch(target.id){
@@ -121,7 +132,7 @@ btncontainer.addEventListener('click',(event) => {
                 resultsdiv.textContent=roundresult;
                 console.log(resultsdiv);
 
-                results.appendChild(resultsdiv);
+                roundContainer.appendChild(resultsdiv);
                 console.log(results);
 
                 break;
@@ -135,7 +146,7 @@ btncontainer.addEventListener('click',(event) => {
                 resultsdiv.textContent=roundresult;
                 console.log(resultsdiv);
 
-                results.appendChild(resultsdiv);
+                roundContainer.appendChild(resultsdiv);
                 console.log(results);
 
                 break;
@@ -149,7 +160,7 @@ btncontainer.addEventListener('click',(event) => {
                 resultsdiv.textContent=roundresult;
                 console.log(resultsdiv);
 
-                results.appendChild(resultsdiv);
+                roundContainer.appendChild(resultsdiv);
                 console.log(results)
 
                 break;
@@ -164,31 +175,51 @@ btncontainer.addEventListener('click',(event) => {
         
         console.log("User Score after Round : ",humanScore);
         resultsdivUserScore.textContent=("User Score : " + humanScore);
-        results.append(resultsdivUserScore);
+        roundContainerScore.append(resultsdivUserScore);
 
         console.log("Computer Score after Round : ",computerScore);
         resultsdivCompScore.textContent=("Computer Score : " + computerScore);
-        results.append(resultsdivCompScore);
+        roundContainerScore.append(resultsdivCompScore);
+
+        roundContainer.append(roundContainerScore);
             
         console.log("");
         console.log("");
+
+        currRound.textContent="ROUND "+roundNo;
+        currRoundResult.append(currRound);
+
+       
+        currScore.textContent=+humanScore+":"+computerScore;
+        currRoundResult.append(currScore);
             
-        roundNo++;
+        if(roundNo==5){
+            let final_result=document.querySelector(".final-result");
+            console.log(final_result)
+            if(humanScore>computerScore){
+                final_result.textContent="You Won the Game! 🏆";
+                final_result.style.color="#16a34a";
+            }
+            else if(humanScore<computerScore){
+                final_result.textContent="You Lost the Game! 💔";
+                final_result.style.color="#dc2626";
+            }
+            else{
+                final_result.textContent="It's a Tie ⚖️";
+            };
+            currRoundResult.appendChild(final_result);
+        };
+
+        roundNo++; 
     }
 });
 
-if(roundNo==5){
-    const final_result=document.querySelector(".final-result");
-    console.log(final_results)
-    if(humanScore>computerScore){
-        final_result.textContent("You Won the Game! 🏆");
-    }
-    else if(humanScore<computerScore){
-        final_result.textContent("You Lost the Game! 💔");
-    }
-    else{
-        final_result.textContent("It's a Tie ⚖️");
-    };
+const compbtn=document.querySelector(".computerChoice #button-container");
+compbtn.addEventListener("click",()=>{
+    alert("Click User Buttons (on the left)");
 }
+);
+
+
 
 

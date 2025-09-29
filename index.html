@@ -4,52 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="header">
+    <div id="container">
 
-        <H1><b><em>ROCK-PAPER-SCISSORS GAME</em></b></H1>
+        <div id="header">
 
-    </div>
+            <H1><b><em>ROCK-PAPER-SCISSORS GAME</em></b></H1>
 
-    <div class="Content">
+        </div>
 
-        <div class="userChoice">
+        <div class="Content">
+            <div class="Choices">
+                
+                <div class="userChoice">
 
-            <div id="button-container">
-                <button id="rockbtn">Rock ✊</button>
-                <button id="paperbtn">Paper ✋</button>
-                <button id="scissorsbtn">Scissors ✌️</button>
-            
+                    <div>Your Move:</div>
+
+                    <div id="button-container">
+                        <button id="rockbtn">Rock ✊</button>
+                        <button id="paperbtn">Paper ✋</button>
+                        <button id="scissorsbtn">Scissors ✌️</button>
+                    
+                    </div>
+
+                    <div class="userSelection">
+                        
+                    </div>
+
+                </div>
+
+                <div class="currResult">
+
+                </div>
+
+                
+                <div class="computerChoice">
+                    
+                    <div>Computer's Move:</div>
+                     
+                    <div id="button-container">
+                        <button id="rockbtn">Rock ✊</button>
+                        <button id="paperbtn">Paper ✋</button>
+                        <button id="scissorsbtn">Scissors ✌️</button>
+                
+                    </div>
+
+                    <div class="computerSelection">
+                        
+                    </div>
+                    
+                </div>
+
             </div>
 
-            <div class="userSelection">
+            <div class="heading">ROUNDS</div>
+            
+            <div id="results">
+
+            </div>
+
+            <div class="final-result">
                 
             </div>
-
-        </div>
-
-        <div class="computerChoice">
-
-            <div id="button-container">
-                <button id="rockbtn">Rock ✊</button>
-                <button id="paperbtn">Paper ✋</button>
-                <button id="scissorsbtn">Scissors ✌️</button>
-        
-            </div>
-
-            <div class="computerSelection">
-                
-            </div>
-            
-        </div>
-
-        <div id="results">
-
-        </div>
-
-        <div class="final-result">
-            
         </div>
     </div>
     <script src="./script.js"></script>
